@@ -1,5 +1,8 @@
 @include:'_accordeon.scss';
+@include:'_alert.scss';
+@include:'_back_to_top.scss';
 @include:'_block.scss';
+@include:'_breadcrums.scss';
 @include:'_button.scss';
 @include:'_carousel.scss';
 @include:'_checkbox.scss';
@@ -9,11 +12,14 @@
 @include:'_galerry.scss';
 @include:'_modal_window.scss';
 @include:'_popup.scss';
+@include:'_progressbar.scss';
 @include:'_radiobutton.scss';
+@include:'_rating_bar.scss';
+@include:'_search.scss';
 @include:'_section.scss';
 @include:'_select.scss';
 @include:'_slider.scss';
-
+@include:'_tabs.scss';
 
 
 
