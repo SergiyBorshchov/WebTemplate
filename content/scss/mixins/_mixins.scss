@@ -1,0 +1,20 @@
+//Common mixins.
+@mixin display_default_value{
+	@if $display-default-value==grid{
+		display: grid;
+	} @else if $display-default-value==inline-grid{
+		display: inline-grid;
+	} @else if $display-default-value==flex{
+		display: flex;
+	} @else if $display-default-value==inline-flex{
+		display: inline-flex;
+	} @else if $display-default-value==block{
+		display: block;
+	} @else if $display-default-value==inline-block{
+		display: inline-block;
+	}
+}
+
+@mixin  {
+
+}

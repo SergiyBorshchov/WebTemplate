@@ -1,0 +1,11 @@
+//Includ all styles of project
+@import 'common/_common.scss';
+@import:'elements/_all_elements_styles.scss';
+@import:'mixins/_mixins.scss';
+@import: '_variables.scss';
+
+//Uncomment and add your name files style. It must be the last in this file.
+//@import:'header.scss';
+//@import:'wrapper.scss';
+//@import:'Menu.scss';
+//@import:'footer.scss';
