@@ -1,130 +1,3 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
-}
-@media (min-width: 501px) and (max-width: 600px) {
-  html {
-    font-size: 11px;
-  }
-}
-@media (min-width: 601px) and (max-width: 800px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-body {
-  font: 400 2rem/1.6 "Open Sans", sans-serif !important;
-  color: #000000 !important;
-  position: relative;
-  box-sizing: border-box;
-  background: #FFFFFF !important;
-  letter-spacing: 0.7px;
-}
-
-h1 {
-  display: grid;
-  color: #000000 !important;
-  font-size: 4.8rem;
-  margin: 5px 0;
-}
-h1 > .header-text {
-  display: grid;
-  font-weight: 400;
-}
-h1 > .description {
-  color: #000000 !important;
-  font-size: 2rem;
-  font-weight: 400;
-}
-
-h2 {
-  display: grid;
-  color: #000000 !important;
-  font-size: 3.6rem;
-  margin: 5px 0 6rem;
-  letter-spacing: 1.8px;
-}
-
-h3 {
-  display: grid;
-  color: #000000 !important;
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: 5px 0 25px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-h4 {
-  display: grid;
-  color: #000000 !important;
-  font-size: 1rem;
-  margin: 5px 0;
-  letter-spacing: 0.5px;
-}
-
-a {
-  cursor: pointer;
-  display: grid;
-  text-decoration: none;
-  border: none;
-}
-
-p {
-  margin-bottom: 10px;
-  font-size: 2rem;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-
 .button {
   display: inline-grid;
   text-align: center;
@@ -135,12 +8,19 @@ img {
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none;
-  color: #ffffff;
+  color: rgba(0, 0, 0, 0.8);
   font-family: sans-serif;
   font-size: 1rem;
+  background-color: #e6e6e6;
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.button:hover {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
 }
 .button.button-success {
   background: #1cb841;
@@ -172,15 +52,24 @@ img {
 .button.button-secondary:hover, .button.button-secondary:active, .button.button-secondary:focus {
   background: #24a1c8;
 }
-.button.button-success.button-xsmall, .button.button-error.button-xsmall, .button.button-warning.button-xsmall, .button.button-primary.button-xsmall, .button.button-secondary.button-xsmall {
+.button.button-success, .button.button-error, .button.button-warning, .button.button-primary, .button.button-secondary {
+  color: #FFFFFF;
+}
+.button.button-xsmall {
   font-size: 70%;
 }
-.button.button-success.button-small, .button.button-error.button-small, .button.button-warning.button-small, .button.button-primary.button-small, .button.button-secondary.button-small {
+.button.button-small {
   font-size: 85%;
 }
-.button.button-success.button-large, .button.button-error.button-large, .button.button-warning.button-large, .button.button-primary.button-large, .button.button-secondary.button-large {
+.button.button-large {
   font-size: 110%;
 }
-.button.button-success.button-xlarge, .button.button-error.button-xlarge, .button.button-warning.button-xlarge, .button.button-primary.button-xlarge, .button.button-secondary.button-xlarge {
+.button.button-xlarge {
   font-size: 125%;
+}
+
+.button:disabled, .button[disabled], .button-success:disabled, .button-success[disabled], .button-error:disabled, .button-error[disabled], .button-warning:disabled, .button-warning[disabled], .button-primary:disabled, .button-primary[disabled], .button-secondary:disabled, .button-secondary[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
 }
