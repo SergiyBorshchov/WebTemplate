@@ -1,75 +1,60 @@
-.button {
-  display: inline-grid;
-  text-align: center;
-  border-radius: 5px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  border: none;
-  padding: 1rem 2rem;
-  margin: 0;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.8);
-  font-family: sans-serif;
+.alert {
+  border-width: 0.5px;
+  border-radius: 2px;
+  border-style: solid;
+  padding: 10px 15px;
   font-size: 1rem;
-  background-color: #e6e6e6;
-  transition: background 250ms ease-in-out, transform 150ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  line-height: normal;
-  white-space: nowrap;
-  vertical-align: middle;
 }
-.button:hover {
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+.alert.alert__primary {
+  background-color: rgba(0, 120, 231, 0.4);
+  border-color: #0075e2;
+  color: #004085;
 }
-.button.button-success {
-  background: #1cb841;
+.alert.alert__secondary {
+  background-color: rgba(66, 184, 221, 0.4);
+  border-color: #3eb6dc;
+  color: #383d41;
 }
-.button.button-success:hover, .button.button-success:active, .button.button-success:focus {
-  background: #158c31;
+.alert.alert__success {
+  background-color: rgba(28, 184, 65, 0.4);
+  border-color: #1bb43f;
+  color: #155724;
 }
-.button.button-error {
-  background: #ca3c3c;
+.alert.alert__danger {
+  background-color: rgba(202, 60, 60, 0.4);
+  border-color: #c93838;
+  color: #721c24;
 }
-.button.button-error:hover, .button.button-error:active, .button.button-error:focus {
-  background: #a62d2d;
+.alert.alert__warning {
+  background-color: rgba(255, 243, 205, 0.4);
+  border-color: #fff2c8;
+  color: #856404;
 }
-.button.button-warning {
-  background: #df7514;
+.alert.alert__info {
+  background-color: rgba(12, 84, 96, 0.4);
+  border-color: #0b505b;
+  color: #0c5460;
 }
-.button.button-warning:hover, .button.button-warning:active, .button.button-warning:focus {
-  background: #b05c10;
+.alert.alert__light {
+  background-color: rgba(254, 254, 254, 0.4);
+  border-color: #f9f9f9;
+  color: #818182;
 }
-.button.button-primary {
-  background: #0078e7;
+.alert.alert__dark {
+  background-color: rgba(214, 216, 217, 0.4);
+  border-color: #d3d5d7;
+  color: #1b1e21;
 }
-.button.button-primary:hover, .button.button-primary:active, .button.button-primary:focus {
-  background: #005eb4;
+.alert.alert__primary a, .alert.alert__secondary a, .alert.alert__success a, .alert.alert__danger a, .alert.alert__warning a, .alert.alert__info a, .alert.alert__light a, .alert.alert__dark a {
+  position: relative;
 }
-.button.button-secondary {
-  background: #42b8dd;
+.alert.alert__primary a.alert__link, .alert.alert__secondary a.alert__link, .alert.alert__success a.alert__link, .alert.alert__danger a.alert__link, .alert.alert__warning a.alert__link, .alert.alert__info a.alert__link, .alert.alert__light a.alert__link, .alert.alert__dark a.alert__link {
+  text-decoration: none;
 }
-.button.button-secondary:hover, .button.button-secondary:active, .button.button-secondary:focus {
-  background: #24a1c8;
-}
-.button.button-success, .button.button-error, .button.button-warning, .button.button-primary, .button.button-secondary {
-  color: #FFFFFF;
-}
-.button.button-xsmall {
-  font-size: 70%;
-}
-.button.button-small {
-  font-size: 85%;
-}
-.button.button-large {
-  font-size: 110%;
-}
-.button.button-xlarge {
-  font-size: 125%;
-}
-
-.button:disabled, .button[disabled], .button-success:disabled, .button-success[disabled], .button-error:disabled, .button-error[disabled], .button-warning:disabled, .button-warning[disabled], .button-primary:disabled, .button-primary[disabled], .button-secondary:disabled, .button-secondary[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.6;
+.alert.alert__primary a.alert__link:after, .alert.alert__secondary a.alert__link:after, .alert.alert__success a.alert__link:after, .alert.alert__danger a.alert__link:after, .alert.alert__warning a.alert__link:after, .alert.alert__info a.alert__link:after, .alert.alert__light a.alert__link:after, .alert.alert__dark a.alert__link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
