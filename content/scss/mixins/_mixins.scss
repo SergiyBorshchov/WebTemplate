@@ -14,4 +14,63 @@
 		display: inline-block;
 	}
 }
+//Alert style
+@mixin alert-style-mixin($alert-color) {
+    background: rgba($alert-color, .15);
+    color: $alert-color;
+    border-color: darken($alert-color, 1%);
+    
+    &:hover {
+        background: rgba($alert-color, .1);
+    }
+}
 
+//Icon style
+@mixin fa($icon-code) {
+    display: inline-block;
+    font:$font-family-icon;
+    line-height: inherit;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: $icon-code;
+}
+
+//Button style
+@mixin button-style-mixin($btn-color) {
+    border-color: $btn-color;
+    background-color: $btn-color;
+    color: #ffffff;
+
+    &:hover, &:focus {
+        border-color: lighten($btn-color, 5);
+        background-color: lighten($btn-color, 5);
+    }
+
+    &.ghost {
+        background-color: transparent;
+        color: $btn-color;
+
+        &:hover, &:focus {
+            background-color: $btn-color;
+            color: #ffffff;
+        }
+    }
+
+    &.ghost-white-bg {
+        background-color: #ffffff;
+        color: $btn-color;
+
+        &:hover, &:focus {
+            background-color: $btn-color;
+            color: #ffffff;
+        }
+    }
+
+    &.arrowed {
+        &:after {
+            color: #ffffff;
+        }
+    }
+}

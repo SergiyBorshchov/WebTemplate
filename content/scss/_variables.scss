@@ -1,22 +1,30 @@
 //Display properties variables. 
 $display-default-value:grid; //Сhoose layout style(grid, inline-grid,flex, inline-flex, block,inline-block).
 
-//Default font variables.
-$font-family-default:'Open Sans', sans-serif !important; //Choose font-family 
-$font-weight-default:400 !important;
-$font-size-default:10px !important;
-
-//Colors variables.
-$color-primary:#FFFFFF !important;
-$color-primary-variant:#DCDCDC !important;
-$color-secondary:#000000 !important;
-$color-secondary-variant:#696969 !important;
-$color-error:#B00020 !important;
-$color-active:#FCBA05 !important;
-$color-active-variant:#E69407 !important;
-
 // Screen size variables.
 $screen-size-small:576px !important;
 $screen-size-medium:768px !important;
 $screen-size-large:992px !important;
 $screen-size-xlarge:1200px !important;
+
+//Default font variables.
+$font-family-default:'Open Sans', sans-serif !important; //Choose font-family 
+$font-weight-default:400 !important;
+$font-size-default:10px !important;
+
+//Icons font variables
+$font-family-icon:normal normal normal 1rem FontAwesome;
+
+//Colors variables.
+$color-primary:rgb(0,120,231);
+$color-secondary:rgb(66, 184, 221);
+$color-success:rgb(28, 184, 65);
+$color-danger:rgb(202, 60, 60);
+$color-error:rgba(202, 60, 60, .8);
+$color-warning:rgb(255, 243, 205);
+$color-info:rgb(12, 84, 96);
+$color-light:rgb(254, 254, 254);
+$color-dark:rgb(214, 216, 217);
+
+$color-active:#FCBA05;
+

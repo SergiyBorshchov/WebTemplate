@@ -1,63 +1,56 @@
 .alert{
-	border-width: .5px;
+	border: .5px solid transparent;
 	border-radius: 2px;
-	border-style: solid;
 	padding: 10px 15px;
 	font-size: 1rem;
-
+	position: relative;
+	&:before {
+		position: absolute;
+		left: 15px;
+		@include fa('');
+		line-height: 1 !important;
+	}
+	a{
+		line-height: 1;
+		border-bottom: 1px solid inherit;
+		color: inherit;
+	}
 	&.alert__primary {
-		background-color: rgba(0,120,231, 0.4);
-		border-color: darken(rgb(0,120,231), 1%);
+		@include alert-style-mixin($color-primary);
 		color:#004085;
 	}
 	&.alert__secondary {
-		background-color: rgba(66, 184, 221, 0.4);
-		border-color: darken(rgb(66, 184, 221), 1%);
+		@include alert-style-mixin($color-secondary);
 		color:#383d41;
 	}
 	&.alert__success {
-		background-color: rgba(28, 184, 65, 0.4);
-		border-color: darken(rgb(28, 184, 65), 1%);
+		@include alert-style-mixin($color-success);
 		color:#155724;
+		&:before {
+			content: "\f058";
+		}
 	}
 	&.alert__danger {
-		background-color: rgba(202, 60, 60, 0.4);
-		border-color: darken(rgb(202, 60, 60), 1%);
+		@include alert-style-mixin($color-danger);
 		color:#721c24;
 	}
 	&.alert__warning {
-		background-color: rgba(255,	243,	205, 0.4);
-		border-color: darken(rgb(255,	243,	205), 1%);
+		@include alert-style-mixin($color-warning);
 		color: #856404;
 	}
 	&.alert__info {
-		background-color: rgba(12,	84,	96, 0.4);
-		border-color: darken(rgb(12,	84,	96), 1%);
+		@include alert-style-mixin($color-info);
 		color: #0c5460;
+		&:before {
+			content: "\f05a";
+		}
 	}
 	&.alert__light {
-		background-color: rgba(254,	254,	254, 0.4);
-		border-color: darken(rgb(254,	254,	254), 2%);
+		@include alert-style-mixin($color-light);
 		color: #818182;
 	}
 	&.alert__dark {
-		background-color: rgba(214,	216,	217, 0.4);
-		border-color: darken(rgb(214,	216,	217), 1%);
+		@include alert-style-mixin($color-dark);
 		color: #1b1e21;
-	}
-	&.alert__primary, &.alert__secondary, &.alert__success, &.alert__danger, &.alert__warning, &.alert__info, &.alert__light, &.alert__dark{
-		& a{
-			position: relative;
-			&.alert__link{
-				text-decoration: none;
-				&:after{
-					content: '';
-					position: absolute;
-					width: 100%;
-					bottom: 0;
-					left: 0;
-				}
-			}
-		}
 	}
 }
