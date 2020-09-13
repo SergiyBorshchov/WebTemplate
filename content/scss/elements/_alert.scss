@@ -48,9 +48,15 @@
 	&.alert__light {
 		@include alert-style-mixin($color-light);
 		color: #818182;
+		&:before {
+			content: "\f0eb";
+		}
 	}
 	&.alert__dark {
 		@include alert-style-mixin($color-dark);
 		color: #1b1e21;
+		&:before {
+			content: "\f0eb";
+		}
 	}
 }

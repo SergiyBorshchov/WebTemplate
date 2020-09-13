@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -177,6 +178,9 @@ img {
 .alert.alert__success:hover {
   background: rgba(28, 184, 65, 0.1);
 }
+.alert.alert__success:before {
+  content: "";
+}
 .alert.alert__danger {
   background: rgba(202, 60, 60, 0.15);
   color: #ca3c3c;
@@ -204,6 +208,9 @@ img {
 .alert.alert__info:hover {
   background: rgba(12, 84, 96, 0.1);
 }
+.alert.alert__info:before {
+  content: "";
+}
 .alert.alert__light {
   background: rgba(254, 254, 254, 0.15);
   color: #fefefe;
@@ -212,6 +219,9 @@ img {
 }
 .alert.alert__light:hover {
   background: rgba(254, 254, 254, 0.1);
+}
+.alert.alert__light:before {
+  content: "";
 }
 .alert.alert__dark {
   background: rgba(214, 216, 217, 0.15);
@@ -222,7 +232,20 @@ img {
 .alert.alert__dark:hover {
   background: rgba(214, 216, 217, 0.1);
 }
+.alert.alert__dark:before {
+  content: "";
+}
 
+.back-to-top {
+  position: absolute;
+  right: 15px;
+  bottom: 50px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  text-align: center;
+}
 .button {
   display: inline-grid;
   text-align: center;
